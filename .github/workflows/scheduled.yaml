@@ -9,5 +9,5 @@ jobs:
       - name: Hourly cron job
         run: |
           curl --request POST \
-          --url 'https://example.com/api/task' \
+          --url '${{ secrets.SERVERLESS_URL }}/api/wakeup' \
           --header 'Authorization: Bearer ${{ secrets.ACTION_KEY }}'
